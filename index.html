@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario Deportes</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <section>
+      <h1>Registro de deportes</h1>
+      <form>
+        <div class="input-cont">
+          <label for="txtId">Id del deporte:</label>
+          <input type="number" id="txtId">
+        </div>
+        
+        <div class="input-cont">
+          <label for="txtNombre">Nombre del deporte:</label>
+          <input type="text" id="txtNombre">
+        </div>
+        
+        <div class="input-cont">
+          <label for="txtCantJug">Cantidad de jugadores:</label>
+          <input type="number" id="txtCantJug">
+        </div>
+        
+        <div class="input-cont">
+          <label for="boolAireLibre">Al aire libre:</label>
+          <input type="checkbox" id="boolAireLibre">
+        </div>
+        
+        <input class="btn" type="button" value="Registrar" id="btnRegistrar">
+
+      </form>
+    </section>
+
+    <section>
+      <h1>Lista de deportes</h1>
+      <table id="tblDeportes" cellpadding="10">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nombre deporte</th>
+            <th>Cantidad Jugadores</th>
+            <th>Aire Libre</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+
+
+    </section>
+    <script src="js/registrarDeportes.js"></script>
+  </body>
+</html>

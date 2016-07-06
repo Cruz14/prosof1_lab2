@@ -1,0 +1,50 @@
+body{
+	font-family: Helvetica Neue,Helvetica,sans-serif;
+	background-color: #f1f1f1;
+}
+
+section{
+	float: left;
+	width: 50%
+}
+
+h1 {
+	margin-left: 30px;
+}
+
+.btn{
+	margin-left: 30px;
+	background-color: #8ec541;
+	color: #fff;
+	text-decoration: none;
+	border: none;
+	font-size: 15px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.btn:hover{
+	background-color: #76A336;
+}
+
+form .input-cont {
+	display: block;
+	margin: 30px
+}
+
+form .input-cont label{
+	width: 40%;
+	display: inline-block;
+}
+
+.error{
+  border: 2px solid #c0392b;
+}
+
+table {
+	padding-left: 30px;
+}
+
+th {
+	margin-right: 10px;
+}
