@@ -28,7 +28,7 @@ function validar(){
   var nId = Number(elTxtId.value);
   var sNombre = elTxtNombre.value;
   var nCantJug = Number(eltxtCantJug.value);
-  var bAireLibre = elboolAireLibre.value;
+  var bAireLibre = elboolAireLibre.checked;
   var bError = false;
 
   if(nId == 0){
@@ -48,12 +48,6 @@ function validar(){
     eltxtCantJug.classList.add('error');
   }else{
     eltxtCantJug.classList.remove('error');
-  }
-  if(bAireLibre == 0){
-    bError = true;
-    elboolAireLibre.classList.add('error');
-  }else{
-    elboolAireLibre.classList.remove('error');
   }
   if(bError == false){
     registrar(nId, sNombre, nCantJug,bAireLibre);
@@ -79,8 +73,8 @@ function llenarTabla(){
 
    var aId =JSON.parse (localStorage.getItem('ids_deportes'));
    var aNombres =JSON.parse (localStorage.getItem('nombres_deportes'));
-   var aLatitudes =JSON.parse (localStorage.getItem('cantidad_jugadores'));
-   var aLongitudes =JSON.parse (localStorage.getItem('aire_libre'));
+   var nCantidadJugadores =JSON.parse (localStorage.getItem('cantidad_jugadores'));
+   var bAireLibre =JSON.parse (localStorage.getItem('aire_libre'));
    tbody.innerHTML ='';
 
    var nTamannoArreglos =aId.length;
@@ -100,13 +94,13 @@ function llenarTabla(){
      fila.appendChild(celdaNombre);
 
      var celdaLatitud = document.createElement('td');
-     var nodoTextoLatitud =document.createTextNode(aLatitudes[i]);
+     var nodoTextoLatitud =document.createTextNode(nCantidadJugadores[i]);
      celdaLatitud.appendChild(nodoTextoLatitud);
      fila.appendChild(celdaLatitud);
 
      var celdaLongitud = document.createElement('td');
      var textDisplay;
-     if (aLongitudes[i] == 'on') {
+     if (bAireLibre[i]) {
       textDisplay = 'si';
      } else{
       textDisplay = 'no';
